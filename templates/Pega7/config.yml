@@ -1,7 +1,7 @@
 name: PEGA7
-description: Pega7 installation
+description: Pega7 PRPC
 version: 0
-category: Test
-maintainer: Test # The maintainer of the Catalog entry
-license: Test # The license
-projectURL: Test # The URL related to the Catalog entry
+category: ERP
+maintainer: Salim Ibrahim # The maintainer of the Catalog entry
+license: Pegasystems Inc. # The license
+projectURL: http://www.pega.com # The URL related to the Catalog entry
