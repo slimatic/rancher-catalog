@@ -1,0 +1,18 @@
+.catalog:
+  name: PEGA7
+  questions:
+    - variable: VOLUME_NAME
+      label: Volume Name
+      type: string
+      required: true
+version: '2'
+services:
+  installer:
+    scale: 1
+    start_on_create: true
+  tomcat:
+    scale: 1
+    start_on_create: true
+  postgres:
+    scale: 1
+    start_on_create: true
