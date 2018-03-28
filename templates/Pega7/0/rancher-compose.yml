@@ -1,6 +1,6 @@
 catalog:
   name: "PEGA7"
-  version: "v1"
+  version: "PRPC-7.4.0-92"
   description: "PEGA7"
   uuid: pega7-1
 version: '2'
