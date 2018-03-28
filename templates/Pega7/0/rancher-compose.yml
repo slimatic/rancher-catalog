@@ -1,3 +1,5 @@
+.catalog:
+  name: Pega
 version: '2'
 services:
   installer:
