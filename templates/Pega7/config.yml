@@ -1,7 +1,7 @@
 name: PEGA7
 description: Pega7 installation
-version: 7.4
-category: # The category to use when searching for Catalog entries
-maintainer: # The maintainer of the Catalog entry
-license: # The license
-projectURL: # The URL related to the Catalog entry
+version: 0
+category: Test
+maintainer: Test # The maintainer of the Catalog entry
+license: Test # The license
+projectURL: Test # The URL related to the Catalog entry

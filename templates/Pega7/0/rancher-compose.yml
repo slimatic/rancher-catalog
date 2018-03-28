@@ -1,5 +1,8 @@
-.catalog:
-  name: Pega
+catalog:
+  name: "PEGA7"
+  version: "v1"
+  description: "PEGA7"
+  uuid: pega7-1
 version: '2'
 services:
   installer:
