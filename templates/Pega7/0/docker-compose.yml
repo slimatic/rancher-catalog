@@ -1,8 +1,6 @@
 version: '2'
 volumes:
   volumes:
-  {{.Values.VOLUME_NAME}}:
-    driver: rancher-nfs
   prpc-postgres-entrypoint-initdb.d:
     external: true
     driver: rancher-nfs
