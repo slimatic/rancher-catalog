@@ -1,0 +1,50 @@
+version: '2'
+volumes:
+  prpc-postgres-entrypoint-initdb.d:
+    external: true
+    driver: rancher-nfs
+  archive:
+    external: true
+    driver: rancher-nfs
+  pega-prpc-7.4.0-92:
+    external: true
+    driver: rancher-nfs
+services:
+  installer:
+    image: tomcat:8.0-jre8
+    environment:
+      PRPC_INSTALL_DIR: pega-prpc-7.4.0-92
+    working_dir: /archive/prpc-setup-files/
+    stdin_open: true
+    tty: true
+    volumes_from:
+    - tomcat
+    command:
+    - ./pega-install-script.sh
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.container.start_once: 'true'
+  tomcat:
+    image: tomcat:8.0-jre8
+    environment:
+      PRPC_INSTALL_DIR: pega-prpc-7.4.0-92
+    stdin_open: true
+    volumes:
+    - archive:/archive
+    - pega-prpc-7.4.0-92:/pega-prpc-7.4.0-92
+    - /usr/local/tomcat/
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.sidekicks: installer
+  postgres:
+    hostname: postgres
+    image: pegasystems/postgres-pljava-openjdk
+    stdin_open: true
+    working_dir: /archive/prpc-setup-files/
+    volumes:
+    - archive:/archive
+    - prpc-postgres-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
