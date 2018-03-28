@@ -1,6 +1,6 @@
 name: PEGA7
 description: Pega7 PRPC
-version: 0
+version: 7.4.0-92
 category: ERP
 maintainer: Salim Ibrahim # The maintainer of the Catalog entry
 license: Pegasystems Inc. # The license
