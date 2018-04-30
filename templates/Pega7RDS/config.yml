@@ -1,5 +1,5 @@
-name: PEGA7
-description: Pega7 PRPC
+name: PEGA7RDS
+description: Pega7 PRPC (RDS)
 version: 7.4.0-92
 category: ERP
 maintainer: Salim Ibrahim # The maintainer of the Catalog entry
