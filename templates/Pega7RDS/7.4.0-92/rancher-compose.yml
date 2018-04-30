@@ -1,0 +1,20 @@
+catalog:
+  name: "PEGA7"
+  version: "PRPC-7.4.0-92"
+  description: "PEGA7"
+  uuid: pega7-1
+  questions:
+    - variable: "rds_endpoint"
+      label: "AWS RDS rds_endpoint"
+      description: "The database endpoint"
+version: '2'
+services:
+  installer:
+    scale: 1
+    start_on_create: true
+  tomcat:
+    scale: 1
+    start_on_create: true
+  postgres:
+    hostname: ${rds_endpoint}
+    start_on_create: true
