@@ -5,8 +5,8 @@ catalog:
   uuid: pega7-1
   questions:
     - variable: "rds_endpoint"
-      label: "AWS RDS rds_endpoint"
-      description: "The database endpoint"
+      label: "AWS RDS ENDPONT"
+      description: "The database endpoint on AWS"
       type: string
 version: '2'
 services:
