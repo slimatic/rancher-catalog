@@ -7,6 +7,7 @@ catalog:
     - variable: "rds_endpoint"
       label: "AWS RDS rds_endpoint"
       description: "The database endpoint"
+      type: string
 version: '2'
 services:
   installer:
